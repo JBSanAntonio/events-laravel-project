@@ -15,3 +15,9 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::resource('locations', 'LocationsController');
+
+Route::resource('users', 'UsersController');
+
+Route::resource('calendar_events', 'CalendarEventsController');

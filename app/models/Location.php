@@ -16,10 +16,12 @@ class Location extends Model
 		'state' => 'required|max:255',
 		'zip' => 'required|integer'
 	);
+	
+/*hasOne and hasMany tells Laravel that this table does not have the foreign key*/
 
 	public function calendar_events()
 	{
-	    return $this->belongsToMany('CalendarEvent');
+	    return $this->hasMany('CalendarEvent');
 	}
 }
 
