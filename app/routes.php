@@ -21,3 +21,6 @@ Route::resource('locations', 'LocationsController');
 Route::resource('users', 'UsersController');
 
 Route::resource('calendar_events', 'CalendarEventsController');
+
+Route::get('about', 'HomeController@showAbout');
+

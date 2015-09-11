@@ -11,7 +11,29 @@ class CalendarEventsController extends \BaseController {
 	{
 		$calendarevents = Calendarevent::all();
 
-		return View::make('calendarevents.index', compact('calendarevents'));
+/*		return View::make('calendarevents.index', compact('calendarevents'));*/
+
+		return View::make('calendar_events.index', compact('calendarevents'));
+		
+		//show all events here
+		$query = Calendarevent::with('user');
+
+		$search=Input::get('search');
+
+		if (Input::has('search')) {
+			$query->where('title', 'like', '%'. $search . "%")
+				  ->orWhere('description', 'like', '%' . $search . "%")
+/*				  ->orWhereHas('tag', function($q) use ($name){
+				  	$q->where('name', 'like', '%' . $search . "%")
+				  }	*/	
+				  ->orWhereHas('user', function($q) use ($search){			
+					$q->where('first_name', 'like', '%' . $search . "%")
+					  ->orWhere('last_name', 'like', '%' . $search . "%");
+			});
+		}
+		$posts = $query->orderBy('created_at', 'desc')->paginate(10);
+    
+		return View::make('calendarevents.index')->with('calendarevents', $calendarevents);
 	}
 
 	/**
@@ -19,6 +41,7 @@ class CalendarEventsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
 	public function create()
 	{
 		return View::make('calendarevents.create');
