@@ -26,6 +26,7 @@ class CalendarEventsTableSeeder extends Seeder {
 			$calendar_event->title = $faker->title;
 			$calendar_event->description = $faker->catchPhrase;
 			$calendar_event->price = $faker->randomNumber(2);
+			$calendar_event->url = $faker->imageUrl(640, 480, 'city');
 			$calendar_event->save();
 		}
 	}

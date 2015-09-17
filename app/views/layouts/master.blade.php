@@ -18,10 +18,9 @@
 
 <body>
 
-{{-- add navbar with login here --}}
+@include('partials.header')
 @include('partials.navbar')
 
-@include('partials.header')
 	
 	
 	@if (Session::has('successMessage'))
@@ -42,6 +41,7 @@
 			</ul>
 		</div>
 	@endif
+
 
 	<main class ="container">
 	@yield('content')

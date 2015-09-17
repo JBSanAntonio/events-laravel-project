@@ -1,0 +1,76 @@
+body {
+
+	font-family: Book Antiqua, "Helvetica Neue", sans-serif;
+}
+
+.logo {
+	width: 50%;
+	margin: 1em;
+	vertical-align: middle;
+}
+.homeTitle {
+	margin-top: 2em;
+}
+
+h1 {
+	color: #024177;
+	text-align: left;	
+	font-size: 2.2em;
+	font-style: bold;
+	vertical-align: middle;
+	
+}
+.footerText {
+	text-align: center;	
+}
+footer a {
+	font-size: 2em;
+	color: #000;	
+}
+.navbar {
+	width: 100%;
+	display: inline;
+	padding: 0;
+	margin: 0 auto;
+	font-size: 1.5em;
+	background-color: blue;
+}
+footer a {
+	margin: 0;
+	padding: 0;
+	color: #024177;
+	font-size: 1.5em;
+}
+.loginDropdown {
+	margin-right: 200px;
+}
+.navbar-btn {
+	background-color: #024177;
+	border-color: #fff;
+}
+.navbar-btn:hover {
+	background-color: #A0AFBA;
+	border-color: #024177;
+}
+.btn-default {
+	background-color: #024177;
+	color: #A0AFBA;
+	border-color: #fff;
+}
+footer a:hover {
+      background-color: 
+    }
+.nav {
+}
+.siteIntro {
+	font-size: 2em;
+	margin: 0;
+	padding: 1em;
+}
+.bonApp {
+	color: #024177;
+	text-align: center;	
+	font-size: 2.2em;
+	font-style: bold;
+	padding: 1em;
+}

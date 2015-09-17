@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
-});
+});*/
+Route::get('/', 'HomeController@showHome');
+
+Route::get('home', 'HomeController@showHome');
 
 Route::resource('locations', 'LocationsController');
 
@@ -23,4 +26,14 @@ Route::resource('users', 'UsersController');
 Route::resource('calendar_events', 'CalendarEventsController');
 
 Route::get('about', 'HomeController@showAbout');
+
+Route::get('login', 'HomeController@showLogin');
+
+Route::post('login', 'HomeController@doLogin');
+
+Route::get('logout', 'HomeController@doLogout');
+
+Route::get('calendarevents/{id}', 'CalendarEventsController@show');
+
+
 

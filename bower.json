@@ -1,0 +1,19 @@
+{
+  "name": "events.dev",
+  "version": "0.0.0",
+  "homepage": "https://github.com/JBSanAntonio/events-laravel-project",
+  "authors": [
+    "Julie Buser <jbuser2013@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37"
+  }
+}

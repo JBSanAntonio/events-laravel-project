@@ -20,6 +20,7 @@ class CreateCalendarEventsTable extends Migration {
 			$table->string('title', 255);
 			$table->string('description', 255);
 			$table->decimal('price');
+			$table->string('url', 255);
 			$table->integer('user_id')->unsigned();
 			$table->integer('location_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
